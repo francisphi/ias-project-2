@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Message Card Project-2</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<style type="text/css" > 
+ @media print {
+    body *{
+        visibility: hidden;
+    }
+    .custom-message, .custom-message * {
+        visibility: visible;
+    }
+
+    
+    body{
+        
+        -webkit-print-color-adjust: exact; /* For Chrome/Safari */
+                print-color-adjust: exact; /* For other browsers */
+                background-image: url('Img/birthday1.jpg'); /* Ensure the background image prints */
+                background-repeat: no-repeat;
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+               
+       
+    } 
+   
+   .custom-message{
+                position:absolute;
+                top: 41%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 200%; /* Adjust the width to fit the page */
+                max-width: 800px;
+                padding-top: 10px;
+                border: 5px solid violet;
+                box-shadow: 15px 15px #b57edc;
+                backdrop-filter: blur(10px);
+                height: 100px;
+                background-color: rgba(255, 255, 255, 0.231);
+                
+   }
+    @page {
+                
+                margin: 0; /* Remove default margins to center content */
+            }
+            
+
+
+    .prnt {
+        display: none; 
+      }
+    }
+</style>
+
+<img src="Img/print.png" onclick="prnt()" class="prnt" alt="Print" id="prnt" style="width: 10%; height: auto; position: absolute; top: 10px; right: 10px; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 15px rgba(0, 0, 0, 0.2)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+    <body style=" padding-top:100px; background-image: url('Img/birthday1.jpg');  background-repeat: no-repeat; height: auto; max-width: 100%; width: 100%;">   
+    <div class="container" align="center">
+        <form action="">
+        <div class="custom-message"  style="box-shadow: 15px 15px #b57edc; backdrop-filter:blur(10px); margin: 0 auto; max-width: 900px; padding: 15px; border:5px solid violet; max-height:100%; height:470px; width: auto;">
+            <h1 style="font-family: serif; color:#d6b4fc;" >Happy Birthday!!!</h1>
+            <textarea name="custom-name lead" id="custome-name"  style=" color:#d6b4fc; text-transform: capitalize; background-color:transparent; border:none; overflow:auto; outline: none; resize: none; font-size:21px; max-height:50px; text-align: justify; text-align-last: center; font-family: cursive; max-width: 100%; width:500px;"  placeholder="Custom Birthday Person's Name"></textarea>
+            <div class="custom-group">
+                <textarea class="form-control textarea-paragraph" name="custom-text" id="custom-text" style="white-space: pre-wrap; color:#d6b4fc; background-color:transparent; border: 2px solid #d6b4fc;  outline: none; resize: none; font-size:18px; text-align-last:center; text-align:left; font-family: monospace; height:200px; max-width: 100%; width:550px; line-height: 1.5; box-shadow: 10px 10px #c398f5;" placeholder="Custom your Text here(0-50words)......"></textarea></div>
+                <p id="wordCountMessage" class="warning"></p>
+                <div class="custom-group" align="right" style="padding-right: 50px;">
+                <h4  style="font-family: serif; color:#d6b4fc;">Sincerly yours,</h4>
+                <textarea name="custom-name1" id="custome-name1" style="color:#d6b4fc; text-transform: capitalize; background-color:transparent; border:none;  overflow:auto; outline: none; resize: none; font-size:20px; text-align-last: center; font-family: cursive; width:150px; max-width: 100%;" placeholder="Custom your name here."></textarea>
+            </div>
+                
+            </div>
+            </div>
+        </div>
+    </form>
+    </div>
+    <script src="project2.js"></script>
+</body>
+</html>
